@@ -11,31 +11,12 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-/*@font-face {*/
-/*  font-family: 'Montserrat';*/
-/*  font-style: normal;*/
-/*  font-weight: 400;*/
-/*  src: url(/fonts/Montserrat-VariableFont_wght.ttf) format('ttf');*/
-/*}*/
-
-/*@font-face {*/
-/*  font-family: 'Montserrat';*/
-/*  font-style: normal;*/
-/*  font-weight: 400;*/
-/*  src: url(/fonts/Montserrat-Italic-VariableFont_wght.ttf) format('ttf');*/
-/*}*/
-
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
 }
 
-body {
-  font-family: 'Montserrat', serif;
-  font-weight: 500;
-  font-size: medium;
-}
 
 /*
  * Remove text-shadow in selection highlight:
@@ -194,32 +175,6 @@ textarea {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
-/*.navbar-collapse{*/
-/*  width: fit-content;*/
-/*}*/
-a, button {
-  transition: transform 0.1s;
-}
-
-a:hover, button:hover {
-  transform: scale(1.03);
-}
-
-.navbar-brand {
-  font-size: medium;
-}
-
-.navbar-toggler:focus {
-  box-shadow: 0 0 0 .1rem;
-}
-.navbar-nav{
-  padding: 0 1rem;
-}
-.nav-item{
-  width: fit-content;
-  overflow: visible;
-}
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */

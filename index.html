@@ -1,43 +1,36 @@
 <!doctype html>
 <html class="no-js" lang="">
-
 <head>
   <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-        crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat'
-        rel='stylesheet'>
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <meta name="theme-color" content="#fafafa">
+  <title>Individual English</title>
+  <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="" property="og:title">
+  <meta content="" property="og:type">
+  <meta content="" property="og:url">
+  <meta content="" property="og:image">
+  <link href="site.webmanifest" rel="manifest">
+  <link href="icon.png" rel="apple-touch-icon">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/main-scss.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <meta content="#fafafa" name="theme-color">
 </head>
-
 <body>
-
 <!-- Add your site or application content here -->
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <img class="me-2" src="img/logo.svg" alt="Logo image">Individual English</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-              aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="#"> <img alt="Logo image" class="me-2" src="img/logo.svg">Individual English</a>
+      <button
+        aria-controls="navbarScroll"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        class="navbar-toggler"
+        data-bs-target="#navbarScroll"
+        data-bs-toggle="collapse"
+        type="button"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
@@ -59,15 +52,30 @@
     </div>
   </nav>
 </header>
-<p>Hello world! This is HTML5 Boilerplate.</p>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+<main>
+  <!--Banner-->
+  <div class="container banner">
+    <div class="banner-content">
+      <div class="title-and-subtitle">
+        <h1>Онлайн занятия по английскому языку</h1>
+        <p>Качественные онлайн занятия английского языка по всем аспектам с индивидуальным подходом к каждому
+           ученику</p>
+      </div>
+      <div class="banner-btn-wrapper">
+        <a class="btn btn-primary">ЗАПИСАТЬСЯ НА ПРОБНЫЙ УРОК</a>
+        <div class="d-flex align-items-center btn-label"><p>ПЕРВОЕ ПРОБНОЕ ЗАНЯТИЕ БЕСПЛАТНО</p></div>
+      </div>
+    </div>
+  </div>
+</main>
+<script
+  crossorigin="anonymous"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+></script>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
   window.ga = function () {
@@ -80,7 +88,6 @@
   ga('set', 'transport', 'beacon');
   ga('send', 'pageview')
 </script>
-<script src="https://www.google-analytics.com/analytics.js" async></script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
 </body>
-
 </html>
