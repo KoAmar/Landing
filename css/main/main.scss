@@ -184,7 +184,7 @@ $custom-blue: #5D6AFB;
 $primary: #3391FF;
 $default-scale: 0.985;
 $font-family-base: "Montserrat", sans-serif;
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 html, body {
   font-family: "Montserrat", sans-serif;
 
