@@ -190,7 +190,7 @@ $custom-gray: #a6aeb6;
 $custom-blue: #5d6afb;
 $primary: #3391ff;
 $default-scale: 0.985;
-@import "/node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 html,
 body {
   font-family: "Montserrat", sans-serif;
