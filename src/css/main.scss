@@ -399,7 +399,7 @@ button {
       }
     }
 
-    .banner-btn-wrapper {
+      .banner-btn-wrapper {
       display: flex;
       @include media-breakpoint-down(md) {
         flex-direction: column;

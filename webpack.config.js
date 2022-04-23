@@ -22,8 +22,8 @@ const PATHS = {
 // });
 
 // let mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
-const mode = 'production';
-// const mode = 'development';
+// const mode = 'production';
+const mode = 'development';
 let isDev = mode === 'development';
 // const webpack = require('webpack')
 
@@ -36,7 +36,11 @@ module.exports = {
     assetModuleFilename: isDev ? 'assets/[name][ext][query]' : 'assets/[name]-[hash][ext][query]',
     // assetModuleFilename: 'assets/[name][ext][query]',
     filename: isDev ? 'index.js' : 'index-[contenthash].js',
-    clean: true
+    // clean: true
+  },
+  cache: {
+    type: 'filesystem',
+    allowCollectingMemory: true,
   },
   plugins: [
     new MiniCssExtractPlugin({
