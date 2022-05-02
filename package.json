@@ -12,8 +12,8 @@
   "scripts": {
     "dev-parcel": "parcel src/index.html --no-source-maps --open",
     "build-parcel": "parcel build src/index.html --no-source-maps",
-    "start": "webpack-dev-server --open",
-    "dev": "webpack --watch",
+    "start": "webpack-dev-server --live-reload",
+    "dev": "webpack serve --mode development --env development",
     "build": "webpack"
   },
   "dependencies": {

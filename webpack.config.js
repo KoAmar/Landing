@@ -21,9 +21,9 @@ const PATHS = {
 //   sourcemap: true,
 // });
 
-// let mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
+let mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
 // const mode = 'production';
-const mode = 'development';
+// const mode = 'development';
 let isDev = mode === 'development';
 // const webpack = require('webpack')
 
@@ -36,12 +36,12 @@ module.exports = {
     assetModuleFilename: isDev ? 'assets/[name][ext][query]' : 'assets/[name]-[hash][ext][query]',
     // assetModuleFilename: 'assets/[name][ext][query]',
     filename: isDev ? 'index.js' : 'index-[contenthash].js',
-    // clean: true
+    clean: true
   },
-  cache: {
-    type: 'filesystem',
-    allowCollectingMemory: true,
-  },
+  // cache: {
+  //   type: 'filesystem',
+  //   allowCollectingMemory: true,
+  // },
   plugins: [
     new MiniCssExtractPlugin({
       filename: isDev ? '[name].css' : '[name]-[contenthash].css'
@@ -60,15 +60,17 @@ module.exports = {
       { test: /\.html$/, use: 'html-loader' },
       {
         test: /\.s?css$/, use: [
-          isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-          // MiniCssExtractPlugin.loader,
+          // isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader,
+          // 'style-loader',
           'css-loader',
-          'postcss-loader',
+          // 'postcss-loader',
           'sass-loader',
         ]
       },
-      { test: /\.(png|svg|jpg|jpeg|gif)$/, type: 'asset/resource' },
-      { test: /\.(woff|woff2|eot|ttf|otf)$/, type: 'asset/resource' },
+      // { test: /\.(png|svg|jpg|jpeg|gif)$/, type: 'asset/resource' },
+      { test: /\.(png|svg|jpg|jpeg|gif)$/, type: 'asset' },
+      { test: /\.(woff|woff2|eot|ttf|otf)$/, type: 'asset' },
       // { test: /\.svg$/, use: 'svg-inline-loader' },
       {
         test: /\.(js)$/,
@@ -83,6 +85,7 @@ module.exports = {
   performance: {
     hints: false
   },
+  // target: 'web',
   // optimization: {
   //   minimize: true,
   //   minimizer: [
@@ -111,7 +114,8 @@ module.exports = {
       'css': path.resolve(__dirname, 'src/css'),
       'fonts': path.resolve(__dirname, 'src/css/fonts'),
       'img': path.resolve(__dirname, 'src/img'),
-      'modules': path.resolve(__dirname, 'node_modules')
+      'modules': path.resolve(__dirname, 'node_modules'),
+      'bootstrap-scss': path.resolve(__dirname, 'node_modules/bootstrap/scss')
     }
   },
   // devtool: 'source-map'

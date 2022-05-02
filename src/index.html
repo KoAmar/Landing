@@ -3,32 +3,39 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Individual English</title>
+  <title>Evenko English</title>
   <meta content="Super mega english from Nastya" name="description">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <!-- <meta content="width=device-width, initial-scale=1" name="viewport"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <!-- <meta content="" property="og:title"> -->
   <!-- <meta content="" property="og:type"> -->
   <!-- <meta content="" property="og:url"> -->
   <!-- <meta content="" property="og:image"> -->
-  <link href="site.webmanifest" rel="manifest">
-  <link href="icon.png" rel="apple-touch-icon">
   <!-- <link href="css/normalize.css" rel="stylesheet"> -->
   <!-- <link href="css/main.scss" rel="stylesheet"> -->
-  <meta content="#fafafa" name="theme-color">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
   <!-- Add your site or application content here -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#"> <img alt="Logo image" class="me-2" src="img/logo.svg">Individual English</a>
-        <button aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+        <a class="navbar-brand" href="#"> <img alt="Logo image" src="img/logo.svg"></a>
+        <button aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle d-lg-none"
           data-bs-target="#navbarScroll" data-bs-toggle="collapse" type="button">
-          <span class="navbar-toggler-icon"></span>
+          MENU
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 40vh;">
+          <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
             <li class="nav-item">
               <a class="nav-link" href="#">Обо мне</a>
             </li>
@@ -49,20 +56,30 @@
   <main>
     <!--Banner-->
     <div class="container banner">
-      <div class="banner-content">
-        <div class="title-and-subtitle">
-          <h1>Онлайн занятия по английскому языку</h1>
-          <p>Качественные онлайн занятия английского языка по всем аспектам с индивидуальным подходом к каждому
-            ученику</p>
-        </div>
-        <div class="banner-btn-wrapper">
-          <a class="btn btn-primary">ЗАПИСАТЬСЯ НА ПРОБНЫЙ УРОК</a>
-          <div class="d-flex align-items-center btn-label">
-            <p>ПЕРВОЕ ПРОБНОЕ ЗАНЯТИЕ БЕСПЛАТНО</p>
+      <div class="row">
+        <div class="banner-content col-lg-7 col-12">
+          <div class="title-and-subtitle">
+            <h1>Онлайн занятия по английскому языку</h1>
+            <!-- <p>Качественные онлайн занятия английского языка по всем аспектам с индивидуальным подходом к каждому
+              ученику</p> -->
           </div>
+          <div class="banner-btn-wrapper">
+            <a class="btn btn-primary" href="https://t.me/soyssause" target="_blank">ЗАПИСАТЬСЯ НА ПЕРВЫЙ УРОК</a>
+            <div class="d-flex align-items-center btn-label">
+              <p>ПЕРВЫЙ<br>УРОК-КОНСУЛЬТАЦИЯ<br>БЕСПЛАТНО</p>
+            </div>
+          </div>
+        </div>
+        <div class="banner-image-wrapper col-lg-5 col-12 d-lg-flex d-none">
+          <img src="img/banner.svg" alt="Пример урока">
         </div>
       </div>
     </div>
+    <div class="container mt-5">
+      <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FMinsk&showNav=0&showTitle=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&mode=WEEK&src=ZmM5Z200bG5pbTU2azRzbGxjdjN2b2lpdjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23DAE5D0"
+       style="width: 100%; height: 850px;" frameborder="0" scrolling="yes"></iframe>
+    </div>
+
   </main>
   <!-- <script
   crossorigin="anonymous"

@@ -4,8 +4,13 @@ import 'css/main.scss';
 const $ = require('jquery')
 // require.ensure('bootstrap')
 // require.ensure('jquery')
-$(document).ready(()=>{
-    var navbarHeight = $('.navbar').height;
-    $('.banner').height(navbarHeight);
-    
+$(document).ready(() => {
+    var navbarHeight = $('.navbar').height() + 40;
+    $('.banner').css({
+        "padding-top": navbarHeight,
+        // "min-height": navbarHeight + window.innerHeight
+    });
+    $('.menu-toggle').on('click', function () {
+        $(this).toggleClass('is-active');
+    });
 })
