@@ -393,7 +393,6 @@ button {
 .btn {
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
   line-height: 152%;
   border: none;
   border-radius: 8px;
@@ -402,6 +401,8 @@ button {
   padding: 30px 50px;
   background-color: $main-color-4;
   transition: color 0.5s, background-color 0.5s;
+
+  @include font-size(18px);
 
   @include media-breakpoint-down(sm) {
     width: fit-content;
@@ -414,7 +415,7 @@ button {
     color: $custom-white;
     background-color: lighten($color: $main-color-4, $amount: 5%);
     border: none;
-    box-shadow: none;
+    box-shadow: none !important;
   }
 }
 
@@ -484,7 +485,7 @@ button {
   a {
     color: $custom-black;
 
-    &:hover {
+    &:hover, &:visited {
       color: $custom-black;
     }
   }
@@ -528,16 +529,22 @@ button {
   .banner-content {
     // width: 60%;
     position: relative;
-
-    
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    @include media-breakpoint-down(md){
+      align-items: center;
+    }
     &:after {
       position: absolute;
-      top: -115px;
-      left: -20%;
+      top: -100px;
+      // bottom: -100px;
+      bottom: 0;
+      left: -75px;
       content: "";
       width: 120%;
-      height: 180%;
+      height: 130%;
       background-image: url("img/banner-content-bg.svg");
       background-repeat: no-repeat;
       background-position: center;
@@ -546,7 +553,7 @@ button {
 
       @include media-breakpoint-down(md) {
         // top: 0;
-        // left: -20%;
+        left: -35px;
         // height: 100%;
         // width: 100%;
       }
@@ -599,6 +606,9 @@ button {
           padding-right: 20px;
           margin: 0;
           @extend %text-small;
+          @include media-breakpoint-down(md){
+            text-align: center;
+          }
         }
       }
     }

@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
+const { SourceMap } = require('module')
 const PATHS = {
   src: path.join(__dirname, 'src')
 }
@@ -36,12 +37,12 @@ module.exports = {
     assetModuleFilename: isDev ? 'assets/[name][ext][query]' : 'assets/[name]-[hash][ext][query]',
     // assetModuleFilename: 'assets/[name][ext][query]',
     filename: isDev ? 'index.js' : 'index-[contenthash].js',
-    clean: true
+    // clean: true
   },
-  // cache: {
-  //   type: 'filesystem',
-  //   allowCollectingMemory: true,
-  // },
+  cache: {
+    type: 'filesystem',
+    allowCollectingMemory: true,
+  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: isDev ? '[name].css' : '[name]-[contenthash].css'
@@ -61,11 +62,12 @@ module.exports = {
       {
         test: /\.s?css$/, use: [
           // isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-          MiniCssExtractPlugin.loader,
-          // 'style-loader',
-          'css-loader',
+          // MiniCssExtractPlugin.loader,
+          'style-loader',
+          //todo remove fore prod
+          { loader: 'css-loader', options: { sourceMap: true } },
           // 'postcss-loader',
-          'sass-loader',
+          { loader: 'sass-loader', options: { sourceMap: true } },
         ]
       },
       // { test: /\.(png|svg|jpg|jpeg|gif)$/, type: 'asset/resource' },

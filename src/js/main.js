@@ -5,7 +5,7 @@ const $ = require('jquery')
 // require.ensure('bootstrap')
 // require.ensure('jquery')
 $(document).ready(() => {
-    var navbarHeight = $('.navbar').height() + 40;
+    var navbarHeight = $('.navbar').height() + 100;
     $('.banner').css({
         "padding-top": navbarHeight,
         // "min-height": navbarHeight + window.innerHeight
@@ -13,4 +13,5 @@ $(document).ready(() => {
     $('.menu-toggle').on('click', function () {
         $(this).toggleClass('is-active');
     });
+    window.scrollTo(0);
 })
