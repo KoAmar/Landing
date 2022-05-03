@@ -11,8 +11,6 @@
   <!-- <meta content="" property="og:type"> -->
   <!-- <meta content="" property="og:url"> -->
   <!-- <meta content="" property="og:image"> -->
-  <!-- <link href="css/normalize.css" rel="stylesheet"> -->
-  <!-- <link href="css/main.scss" rel="stylesheet"> -->
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -25,28 +23,27 @@
 </head>
 
 <body>
-  <!-- Add your site or application content here -->
   <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#"> <img alt="Logo image" src="img/logo.svg"></a>
-        <button aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle d-lg-none"
-          data-bs-target="#navbarScroll" data-bs-toggle="collapse" type="button">
+        <a class="navbar-brand" href="#"> <img alt="EvenkoEnglish" src="img/logo.svg"></a>
+        <button aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation"
+          class="menu-toggle d-lg-none" data-bs-target="#navbarScroll" data-bs-toggle="collapse" type="button">
           MENU
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
           <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
             <li class="nav-item">
-              <a class="nav-link" href="#">Обо мне</a>
+              <a class="nav-link" href="#about-me">Обо мне</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#">Как проходит обучение</a>
+              <a class="nav-link " href="#featurettes">Как проходит обучение</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#">Отзывы</a>
+              <a class="nav-link " href="#featurettes">Отзывы</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#">Оплата</a>
+              <a class="nav-link " href="#featurettes">Оплата</a>
             </li>
           </ul>
         </div>
@@ -75,21 +72,120 @@
         </div>
       </div>
     </div>
-    <div class="container mt-5">
-      <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FMinsk&showNav=0&showTitle=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&mode=WEEK&src=ZmM5Z200bG5pbTU2azRzbGxjdjN2b2lpdjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23DAE5D0"
-       style="width: 100%; height: 850px;" frameborder="0" scrolling="yes"></iframe>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scheduleModal">
+      Показать расписание
+    </button>
+
+    <!-- Schedule Modal -->
+    <div class="modal fade" id="scheduleModal" tabindex="-1" aria-labelledby="scheduleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="scheduleModalLabel">Расписание на неделю</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FMinsk&showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=WEEK&src=bG5mbGtza2RxZmlxa29oNjEzNm1sZzI0aGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=MWV0M2h0cGtkM3FiMnVqMXM1aTc4NGxscGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D50000&color=%2333B679"
+              frameborder="0" scrolling="yes">
+            </iframe>
+          </div>
+        </div>
+      </div>
     </div>
 
+
+    <!-- About me -->
+    <div id="about-me" class="about-me container">
+      <div class="row">
+        <div class="about-me-image-wrapper col-md-6 col-12">
+          <img src="img/beautiful-girl.png" alt="Моё фото">
+        </div>
+        <div class="about-me-text-wrapper col-md-6 col-12">
+          <div class="about-me-text-subtitle">
+            <h2>Обо мне</h3>
+          </div>
+          <div class="about-me-text">
+            <ul>
+              <li>по образованию я преподаватель иностранных языков, в 2022 году закончила МГЛУ</li>
+              <li>я работаю репетитором уже 3 года и за это время я научилась находить подход к каждому ученику</li>
+              <li>я работаю с ребятами всех уровней от нулЁвых до продвинутых, 12+</li>
+              <li>на моих уроках весело, интересно и комфортно. Могу наругаться, но хвалить тоже буду :)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Featurettes -->
+    <div id="featurettes" class="featurettes">
+      <div class="container">
+        <div class="featurettes-title">
+          <h2>Как проходит обучение</h2>
+        </div>
+        <div class="featurettes-wrapper">
+          <div class="featurettes-item">
+            <div class="featurette-img-wrapper"><img src="img/videocall.svg" alt="Видеозвонок"></div>
+            <div class="featurette-title">
+              <h3>Занятия онлайн</h3>
+            </div>
+            <div class="featurette-text">
+              <p>Для работы тебе нужен скайп/дискорд и компьютер/планшет с камерой.</p>
+            </div>
+            <div class="featurette-arrow-wrapper"><img src="img/arrow-down.svg" alt="Раскрыть описание"></div>
+          </div>
+          <div class="featurettes-item">
+            <div class="featurette-img-wrapper"><img src="img/target.svg" alt="Цель"></div>
+            <div class="featurette-title">
+              <h3>Знакомство</h3>
+            </div>
+            <div class="featurette-text">
+              <p>Первый урок-консультация проводится бесплатно, длится около 15−25 минут. На нём я определяю твой
+                уровень
+                языка и цели, показываю, как организован процесс обучения.</p>
+            </div>
+            <div class="featurette-arrow-wrapper"><img src="img/arrow-down.svg" alt="Раскрыть описание"></div>
+          </div>
+          <div class="featurettes-item">
+            <div class="featurette-img-wrapper"><img src="img/chalk-board.svg" alt="Доска"></div>
+            <div class="featurette-title">
+              <h3>Использование современных технологий</h3>
+            </div>
+            <div class="featurette-text">
+              <p>Занятия проходят на твоей личной интерактивной доске Miro. Ты продолжаешь практиковаться вне уроков,
+                изучая слова и выражения в Quizlet, выполняя домашние задания.</p>
+            </div>
+            <div class="featurette-arrow-wrapper"><img src="img/arrow-down.svg" alt="Раскрыть описание"></div>
+          </div>
+          <div class="featurettes-item">
+            <div class="featurette-img-wrapper"><img src="img/vocabulary.svg" alt="Словарь"></div>
+            <div class="featurette-title">
+              <h3>Продуктивность</h3>
+            </div>
+            <div class="featurette-text">
+              <p>За один урок мы пройдёмся по всем аспектам языка (аудирование/чтение, грамматика, говорение).
+                Постоянная
+                практика речи, благодаря чему ты сам заметишь свой прогресс уже через месяц-два.</p>
+            </div>
+            <div class="featurette-arrow-wrapper"><img src="img/arrow-down.svg" alt="Раскрыть описание"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Google calendar -->
+    <!-- <div class="container mt-5 mb-5">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FMinsk&showNav=0&showTitle=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&mode=WEEK&src=ZmM5Z200bG5pbTU2azRzbGxjdjN2b2lpdjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23DAE5D0"
+        style="width: 100%; height: 850px;" frameborder="0" scrolling="yes"></iframe>
+    </div> -->
+    <footer>
+      <div class="container pt-5 pb-5">
+        <h4>Все права защищены святым духом©</h4>
+      </div>
+    </footer>
   </main>
-  <!-- <script
-  crossorigin="anonymous"
-  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-></script> -->
-  <!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script> -->
-  <!-- <script src="js/main.js"></script> -->
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
+  <!-- <script>
     window.ga = function () {
       ga.q.push(arguments)
     };
@@ -100,7 +196,7 @@
     ga('set', 'transport', 'beacon');
     ga('send', 'pageview')
   </script>
-  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script> -->
 </body>
 
 </html>

@@ -43,6 +43,14 @@ module.exports = {
     type: 'filesystem',
     allowCollectingMemory: true,
   },
+  devServer: {
+    port: 8080,
+    open: true,
+    compress: true,
+    hot: true,
+    liveReload: true,
+    watchFiles: ["src/*.html"],
+  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: isDev ? '[name].css' : '[name]-[contenthash].css'
@@ -79,7 +87,10 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: { presets: ['@babel/preset-env'] }
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-transform-runtime']
+          }
         }
       }
     ]
