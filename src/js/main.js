@@ -11,25 +11,19 @@ function multiEvent() {
         "padding-top": navbarHeight,
     });
     $('#scheduleModal .modal-content').height(window.innerHeight);
-    if ($('#scheduleModal.show').length > 0) {
-        $(':root').css({
-            overflowY: 'hidden'
-        })
-    }
-    else {
-        $(':root').css({
-            overflowY: 'visible'
-        })
-    }
 }
 
 $(document).ready(function () {
     multiEvent();
     // window.scrollTo(0,0);
 
-    $('.menu-toggle').on('click', function () {
+    let menuToggler = $('.menu-toggle');
+    menuToggler.on('click', function () {
         $(this).toggleClass('is-active');
     });
+    // $('.navbar-nav').find('.nav-link').on('click',function(){
+    //     menuToggler.toggleClass('is-active');
+    // })
 
     if ($(window).width() >= 992) {
         $('.featurettes-item').on('mouseenter', function () {
@@ -41,6 +35,18 @@ $(document).ready(function () {
             $(this).find('.featurette-text').slideUp(400)
         })
     }
+    var scheduleModal = document.getElementById('scheduleModal')//$('#scheduleModal');
+    scheduleModal.addEventListener('shown.bs.modal', function () {
+        $(':root').css({
+            overflowY: 'hidden'
+        })
+    })
+    scheduleModal.addEventListener('hidden.bs.modal', function () {
+        $(':root').css({
+            overflowY: 'visible'
+        })
+    })
+
 })
 window.addEventListener('resize', function (event) {
     multiEvent();

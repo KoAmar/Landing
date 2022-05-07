@@ -416,6 +416,10 @@ button {
   }
 }
 
+.btn-close:focus {
+  box-shadow: none;
+}
+
 %flex-center {
   display: flex;
   align-items: center;
@@ -532,6 +536,13 @@ button {
   .navbar-nav {
     --bs-scroll-height: 40vh;
     padding: 0 1rem;
+
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
     .nav-item {
       width: fit-content;
@@ -668,6 +679,8 @@ button {
   padding-top: $blob-overflow;
   padding-bottom: $blob-overflow;
   min-height: 100vh;
+  margin-top: 15px;
+  margin-bottom: 30px;
 
   @include media-breakpoint-down(md) {
     padding-top: 5px;
@@ -690,6 +703,10 @@ button {
       height: 70%;
       width: auto;
       max-width: 100%;
+
+      @include media-breakpoint-up(md) {
+        min-height: 340px;
+      }
     }
 
     &::after {
