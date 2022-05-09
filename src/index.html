@@ -40,10 +40,13 @@
               <a class="nav-link " href="#featurettes">Как проходит обучение</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#featurettes">Отзывы</a>
+              <a class="nav-link " href="#testimonials">Отзывы</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#featurettes">Оплата</a>
+              <a class="nav-link " href="#payment">Оплата</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#contacts">Контакты</a>
             </li>
           </ul>
         </div>
@@ -72,30 +75,6 @@
         </div>
       </div>
     </div>
-
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scheduleModal">
-      Показать расписание
-    </button>
-
-    <!-- Schedule Modal -->
-    <div class="modal fade" id="scheduleModal" tabindex="-1" aria-labelledby="scheduleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="scheduleModalLabel">Расписание на неделю</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <iframe
-              src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FMinsk&mode=AGENDA&showTitle=0&showDate=1&showPrint=0&showCalendars=0&showTz=1&src=bG5mbGtza2RxZmlxa29oNjEzNm1sZzI0aGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZzdhZXVqZGt0anVyZnFpMjRtbDF1ZHBwdm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=MWV0M2h0cGtkM3FiMnVqMXM1aTc4NGxscGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D50000&color=%23B39DDB&color=%2333B679"
-              frameborder="0" scrolling="yes">
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
     <!-- About me -->
     <div id="about-me" class="about-me container">
       <div class="row">
@@ -112,7 +91,8 @@
               <li>Работаю репетитором более 3 лет</li>
               <li>Нахожу индивидуальный подход к каждому моему ученику. Твой комфорт превыше всего</li>
               <li>Работаю с ребятами всех уровней: от нулёвых до продвинутых, 12+</li>
-              <li>Я против скучных уроков, нам будет весело и интересно. Моя задача - тебя мотивировать и направлять, твоя - быть активным.   </li>
+              <li>Я против скучных уроков, нам будет весело и интересно. Моя задача - тебя мотивировать и направлять,
+                твоя - быть активным. </li>
             </ul>
           </div>
         </div>
@@ -173,18 +153,150 @@
         </div>
       </div>
     </div>
-    <!-- Google calendar -->
-    <!-- <div class="container mt-5 mb-5">
-      <iframe
-        src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FMinsk&showNav=0&showTitle=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&mode=WEEK&src=ZmM5Z200bG5pbTU2azRzbGxjdjN2b2lpdjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23DAE5D0"
-        style="width: 100%; height: 850px;" frameborder="0" scrolling="yes"></iframe>
-    </div> -->
-    <footer>
-      <div class="container pt-5 pb-5">
-        <h4>Все права защищены Павлом Головановым©</h4>
+    <!-- Testimonials -->
+    <div id="testimonials" class="testimonials">
+      <div class="title container">
+        <h2>Отзывы моих учеников</h2>
       </div>
-    </footer>
+      <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7 col-12 left">
+                  <img class="quotes" src="img/quotes.svg" alt="Кавычки">
+                  <div class="testimonial-title">
+                    <h3>«Я хотела найти себе преподавателя, которого я не брошу на 15 минуте и не выйду из созвона»</h3>
+                  </div>
+                  <div class="testimonial-text">
+                    <p>
+                      «Очень хочу написать отзыв о моем репетиторе/преподавателе и вообще о классном и хорошем человеке
+                      –
+                      о Насте. С ней очень комфортно, её не стесняешься, с ней очень удобно, она супер гибкая.
+                    </p>
+                    <p>
+                      У неё серьезное отношение к своей профессии, к нашим урокам. С Настей все было и есть классно. Она
+                      понимает, как строить со мной уроки, чтобы мне было и легко, и интересно. Она очень хорошо
+                      чувствует
+                      меня и находит подход.»
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-5 col-12 right">
+                  <div class="image-wrapper"><img src="img/testimonial-1.png" alt="Фото первого отзыва"></div>
+                  <h4>Айгуль</h4>
+                  <span class="contact">@ayg_akhmetzyanova</span>
+                  <span class="city">Москва</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7 col-12 left">
+                  <img class="quotes" src="img/quotes.svg" alt="Кавычки">
+                  <div class="testimonial-title">
+                    <h3>«Благодаря ей, я стал меньше бояться разговаривать на английском языке и заметил за собой
+                      колоссальный прогресс»</h3>
+                  </div>
+                  <div class="testimonial-text">
+                    <p>
+                      «Хочу выразить огромную благодарность Анастасии Александровне за её работу, за её профессионализм
+                      и умение найти общий и подход во всех вопросах, благодаря ей, я стал меньше бояться разговаривать
+                      на английском языке и заметил за собой колоссальный прогресс, как в грамматике, так и в разговоре
+                      с носителями языка, которого не было с другими преподавателями, она умеет сделать занятие
+                      интересным после которого ты ждёшь следующее, а не ждёшь когда оно закончится.»
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-5 col-12 right">
+                  <div class="image-wrapper"><img src="img/testimonial-2.png" alt="Фото второго отзыва"></div>
+                  <h4>Андрей</h4>
+                  <span class="contact">@zqqqqqqw</span>
+                  <span class="city">Минск</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7 col-12 left">
+                  <img class="quotes" src="img/quotes.svg" alt="Кавычки">
+                  <div class="testimonial-title">
+                    <h3>«С Анастасией легко найти общий язык и раскрепоститься.»</h3>
+                  </div>
+                  <div class="testimonial-text">
+                    <p>
+                      «Занимаюсь с Анастасией уже 2,5 года, она мой первый преподаватель иностранного языка. За это
+                      время мой английский достиг очень хорошего уровня. Я стала увереннее себя чувствовать в общении
+                      .Ни
+                      разу не пожалела, что занимаюсь именно с ней, и не только я, рекомендую ее как преподавателя всем
+                      знакомым!»
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-5 col-12 right">
+                  <div class="image-wrapper"><img src="img/testimonial-3.png" alt="Фото третьего отзыва"></div>
+                  <h4>Яна</h4>
+                  <span class="contact">@yalugovskaya</span>
+                  <span class="city">Москва</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel"
+        data-bs-slide="prev">
+        <span class="">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel"
+        data-bs-slide="next">
+        <span class="">Next</span>
+      </button>
+    </div>
+    <!-- Payment -->
+    <div id="payment" class="payment">
+      <div class="container">Оплата</div>
+    </div>
+    <!-- Enrolling -->
+    <!-- <div id="enrolling" class="enrolling">Записаться</div> -->
+    <!-- Contacts -->
+    <div id="contacts" class="contacts">
+      <div class="container">
+        Контакты
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scheduleModal">
+          Показать расписание
+        </button>
+      </div>
+    </div>
+    <!-- Schedule Modal -->
+    <div class="modal fade" id="scheduleModal" tabindex="-1" aria-labelledby="scheduleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="scheduleModalLabel">Расписание на неделю</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FMinsk&mode=AGENDA&showTitle=0&showDate=1&showPrint=0&showCalendars=0&showTz=1&src=bG5mbGtza2RxZmlxa29oNjEzNm1sZzI0aGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZzdhZXVqZGt0anVyZnFpMjRtbDF1ZHBwdm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=MWV0M2h0cGtkM3FiMnVqMXM1aTc4NGxscGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D50000&color=%23B39DDB&color=%2333B679"
+              frameborder="0" scrolling="yes">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
+  <footer>
+    <div class="container pt-5 pb-5">
+      <a>
+        <p>Сделал Павел Голованов в 2022 году</p>
+      </a>
+    </div>
+  </footer>
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <!-- <script>
     window.ga = function () {
