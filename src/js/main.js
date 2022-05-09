@@ -1,19 +1,23 @@
 import * as bootstrap from 'bootstrap';
-window.bootstrap = bootstrap;
-// import Swiper from 'swiper';
+import $ from 'jquery';
+// const $ = require('jquery')
+import 'slick-carousel';
+// import jquery from 'jquery';
 import 'css/main.scss';
-const $ = require('jquery')
+window.bootstrap = bootstrap;
+
 let navHeight;
 
-function initNavHeight() {
+function currentNavHeight() {
     // if ($(window).width() >= 992) {
-    navHeight = $(".navbar").outerHeight(true);
+        navHeight = $(".navbar").outerHeight(true);
     // }
     // else {
-    //     console.log($(".navbar").outerHeight(true));
-    //     console.log($(".navbar-collapse").outerHeight(true));
-    //     navHeight = $(".navbar").outerHeight(true)// - $(".navbar-collapse").outerHeight(true);
+        // console.log($(".navbar").outerHeight(true));
+        // console.log($(".navbar-collapse").outerHeight(true));
+    //     navHeight = $(".navbar").outerHeight(true) - $(".navbar-collapse").outerHeight(true);
     // }
+    console.log(navHeight);
 }
 
 function hideLongTestimonial() {
@@ -26,7 +30,7 @@ function hideLongTestimonial() {
 }
 
 function multiEvent() {
-    initNavHeight();
+    currentNavHeight();
 
     $('.banner').css({
         "padding-top": navHeight + 100,
@@ -39,7 +43,7 @@ function multiEvent() {
     })
 }
 
-$(document).ready(function () {
+window.addEventListener('load', function () {
     multiEvent();
 
     let menuToggler = $('.menu-toggle');
@@ -66,11 +70,11 @@ $(document).ready(function () {
             menuToggler.toggleClass('is-active');
             bsCollapse.hide();
         }
-        // console.log(blockTop);
-        // console.log(navHeight);
+        // currentNavHeight();
         window.scrollTo(0, blockTop - navHeight);
     })
 
+    //About me
     if ($(window).width() >= 992) {
         $('.featurettes-item').on('mouseenter', function () {
             $(this).addClass('is-active');
@@ -81,6 +85,8 @@ $(document).ready(function () {
             $(this).find('.featurette-text').slideUp(200)
         })
     }
+
+    //Schedule
     var scheduleModal = document.getElementById('scheduleModal')//$('#scheduleModal');
     scheduleModal.addEventListener('shown.bs.modal', function () {
         $(':root').css({
@@ -93,23 +99,15 @@ $(document).ready(function () {
         })
     })
 
-    hideLongTestimonial()
-    var testimonialsCarousel = document.getElementById('testimonialsCarousel')
-    testimonialsCarousel.addEventListener('slid.bs.carousel', function () {
-        // console.log('+');
-        // $('.testimonials .carousel-item').each(function () {
-        // $(this).css('opacity', '0')
-        // $(this).show()
-        // console.log($(this).height());
-        // if ($(this).height() > 350) {
-        //     console.log('+')
-        //     $(this).addClass('show-more')
-        // }
-        // $(this).find('*:not(active)').hide()
-        // $(this).css('opacity', '1')
-        // })
-        hideLongTestimonial()
-    })
+    //Testimonials
+    $('.testimonials-wrapper').slick({
+        // infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+    });
+
 })
 window.addEventListener('resize', function () {
     multiEvent();

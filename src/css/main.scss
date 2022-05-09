@@ -240,7 +240,7 @@ $default-scale: 0.985;
 @import "bootstrap-scss/modal";
 // @import "bootstrap-scss/tooltip";
 // @import "bootstrap-scss/popover";
-@import "bootstrap-scss/carousel";
+// @import "bootstrap-scss/carousel";
 // @import "bootstrap-scss/spinners";
 // @import "bootstrap-scss/offcanvas";
 
@@ -252,6 +252,13 @@ $default-scale: 0.985;
 
 // @import "modules/swiper/swiper.scss";
 
+$slick-font-path: "modules/slick-carousel/slick/fonts/" !default;
+$slick-font-family: "slick" !default;
+$slick-loader-path: "modules/slick-carousel/slick/" !default;
+$slick-arrow-color: black !default;
+
+@import "modules/slick-carousel/slick/slick.scss";
+// @import "modules/slick-carousel/slick/slick-theme.scss";
 
 
 %main-title {
@@ -869,10 +876,10 @@ main>*:not(.banner):not(.modal) {
 .testimonials {
   // min-height: 100vh;
   // @extend %flex-center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: flex-start;
   position: relative;
 
 
@@ -880,90 +887,122 @@ main>*:not(.banner):not(.modal) {
     @extend %flex-center;
   }
 
-  .carousel {
-    height: 100%;
-    width: 100%;
-    // min-height: 70vh;
-    // padding-bottom: 40px;
+  .testimonials-wrapper.slick-slider {
+    // width: 60%;
 
-    .carousel-inner {
-      height: 100%;
+    // margin-left: 20%;
+    // margin-right: 20%;
+    // min-height: 100%;
+    // display: flex;
+    width: 70vw;
+    @include media-breakpoint-down(md){
+      width: 100%;
+    }
+    margin-left: auto;
+    margin-right: auto;
+    position: unset;
+    // overflow: visible;
 
-      .carousel-item>* {
-        width: 60%;
-        border: 1px solid $main-color-3;
-        border-radius: 5px;
-        padding: 30px;
+    .slick-list {
+      overflow: visible;
 
-        @include media-breakpoint-down(md) {
-          width: calc(100% - 20px);
-        }
+      .slick-track {
+        display: flex;
 
+        .slick-slide {
+          transform: scale(0.8);
+          opacity: 0.5;
+          transition: transform 0.3s, opacity 0.3s;
+          transition-delay: 500ms;
+          height: inherit;
+          padding: 0 5px;
 
-        .left {
-          position: relative;
-
-          &.show-more {
-            mask-image: linear-gradient(to top transparent 25%, black 75%);
-            height: 350px;
+          &>* {
+            height: 100%;
           }
 
-          .quotes {
-            margin-bottom: 30px;
-          }
+          .testimonial-item {
+            // max-width: ;
+            height: 100%;
+            border: 1px solid $main-color-3;
+            border-radius: 5px;
+            padding: 30px;
 
-          // &::before {
-          //   position: absolute;
-          //   content: '';
-          //   width: 40px;
-          //   height: 40px;
-          //   background-image: url(img/);
-          // }
+            @include media-breakpoint-down(md) {
+              width: calc(100% - 20px);
+            }
 
-          .testimonial-title * {
-            margin-bottom: 20px;
-          }
 
-          .testimonial-text * {
-            margin-bottom: 10px;
-          }
-        }
+            .left {
+              position: relative;
 
-        .right {
-          @extend %flex-center;
-          flex-direction: column;
+              &.show-more {
+                mask-image: linear-gradient(to top transparent 25%, black 75%);
+                height: 350px;
+              }
 
-          .image-wrapper {
-            @extend %flex-center;
+              .quotes {
+                margin-bottom: 30px;
+              }
 
-            img {
-              width: 70%;
-              height: auto;
+              // &::before {
+              //   position: absolute;
+              //   content: '';
+              //   width: 40px;
+              //   height: 40px;
+              //   background-image: url(img/);
+              // }
+
+              .testimonial-title * {
+                margin-bottom: 20px;
+              }
+
+              .testimonial-text * {
+                margin-bottom: 10px;
+              }
+            }
+
+            .right {
+              @extend %flex-center;
+              flex-direction: column;
+
+              .image-wrapper {
+                @extend %flex-center;
+
+                img {
+                  width: 70%;
+                  height: auto;
+                }
+              }
+
+              h4 {
+                margin-top: 25px;
+              }
+
+              span.contact {
+                @include font-size(15px);
+                color: $main-color-4;
+              }
+
+              span.city {
+                @include font-size(16px);
+                color: $custom-gray;
+              }
             }
           }
-
-          h4 {
-            margin-top: 25px;
-          }
-
-          span.contact {
-            @include font-size(15px);
-            color: $main-color-4;
-          }
-
-          span.city {
-            @include font-size(16px);
-            color: $custom-gray;
-          }
         }
 
-
+        .slick-slide.slick-active {
+          transform: scale(1);
+          opacity: 1;
+        }
       }
     }
   }
 
-  .carousel-control-prev,
-  .carousel-control-next {
+  .slick-prev,
+  .slick-next {
+    position: absolute;
     color: red;
     top: unset;
     bottom: 30px;
@@ -977,12 +1016,12 @@ main>*:not(.banner):not(.modal) {
     }
   }
 
-  .carousel-control-prev {
+  .slick-prev {
     left: calc(50% - 100px);
     transform: translate(-50%);
   }
 
-  .carousel-control-next {
+  .slick-next {
     right: calc(50% - 100px);
     transform: translate(50%);
   }
