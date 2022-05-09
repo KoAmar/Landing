@@ -876,9 +876,9 @@ main>*:not(.banner):not(.modal) {
 .testimonials {
   // min-height: 100vh;
   // @extend %flex-center;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   // justify-content: flex-start;
   position: relative;
 
@@ -895,9 +895,11 @@ main>*:not(.banner):not(.modal) {
     // min-height: 100%;
     // display: flex;
     width: 70vw;
-    @include media-breakpoint-down(md){
-      width: 100%;
+
+    @include media-breakpoint-down(md) {
+      width: calc(100% - 10px);
     }
+
     margin-left: auto;
     margin-right: auto;
     position: unset;
@@ -922,7 +924,9 @@ main>*:not(.banner):not(.modal) {
           }
 
           .testimonial-item {
-            // max-width: ;
+            display: flex !important;
+            align-items: center;
+
             height: 100%;
             border: 1px solid $main-color-3;
             border-radius: 5px;
@@ -936,22 +940,15 @@ main>*:not(.banner):not(.modal) {
             .left {
               position: relative;
 
-              &.show-more {
-                mask-image: linear-gradient(to top transparent 25%, black 75%);
-                height: 350px;
-              }
+              // &.show-more {
+              //   mask-image: linear-gradient(to top, transparent 10%, black 50%);
+              //   height: 250px;
+              //   overflow: hidden;
+              // }
 
               .quotes {
                 margin-bottom: 30px;
               }
-
-              // &::before {
-              //   position: absolute;
-              //   content: '';
-              //   width: 40px;
-              //   height: 40px;
-              //   background-image: url(img/);
-              // }
 
               .testimonial-title * {
                 margin-bottom: 20px;
@@ -966,27 +963,63 @@ main>*:not(.banner):not(.modal) {
               @extend %flex-center;
               flex-direction: column;
 
+              @include media-breakpoint-down(md) {
+                padding-top: 15px;
+                flex-direction: row;
+              }
+
               .image-wrapper {
                 @extend %flex-center;
 
+                @include media-breakpoint-down(md) {
+                  width: 50%;
+                }
+
+                @include media-breakpoint-down(sm) {
+                  width: 30%;
+                }
+
                 img {
                   width: 70%;
+
+                  @include media-breakpoint-down(md) {
+                    width: 150px;
+                    max-width: 95%;
+                  }
+
+                  @include media-breakpoint-down(sm) {
+                    width: 100px;
+                  }
+
                   height: auto;
                 }
               }
 
-              h4 {
-                margin-top: 25px;
-              }
+              .client-bio {
+                @extend %flex-center;
+                flex-direction: column;
 
-              span.contact {
-                @include font-size(15px);
-                color: $main-color-4;
-              }
+                @include media-breakpoint-down(md) {
+                  width: 50%;
+                }
 
-              span.city {
-                @include font-size(16px);
-                color: $custom-gray;
+                @include media-breakpoint-down(sm) {
+                  width: 70%;
+                }
+
+                h4 {
+                  margin-top: 25px;
+                }
+
+                span.contact {
+                  @include font-size(15px);
+                  color: $main-color-4;
+                }
+
+                span.city {
+                  @include font-size(16px);
+                  color: $custom-gray;
+                }
               }
             }
           }
