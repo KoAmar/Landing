@@ -6,7 +6,10 @@ import 'slick-carousel';
 import 'css/main.scss';
 window.bootstrap = bootstrap;
 
+var target = window.location.hash;
 let navHeight;
+let menuToggler;
+let bsCollapse;
 
 function currentNavHeight() {
     // if ($(window).width() >= 992) {
@@ -20,7 +23,6 @@ function currentNavHeight() {
     // console.log(navHeight);
 }
 
-
 function multiEvent() {
     currentNavHeight();
 
@@ -33,16 +35,36 @@ function multiEvent() {
     $('main > *:not(.banner)').each(function () {
         $(this).css('min-height', window.innerHeight - navHeight);
     })
+    if (target) {
+        setTimeout(function () {
+            scrollTo(target, menuToggler, bsCollapse);
+            target = undefined;
+        }, 1);
+    }
+}
+
+function scrollTo(anchor, menuToggler, bsCollapse) {
+    let blockTop = $(anchor).offset().top;
+    history.replaceState(undefined, undefined, anchor)
+
+    if ($(window).width() < 992) {
+        menuToggler.removeClass('is-active');
+        bsCollapse.hide();
+    }
+    // currentNavHeight();
+    window.scrollTo(0, blockTop - navHeight);
+    target = anchor;
 }
 
 window.addEventListener('load', function () {
-    multiEvent();
 
-    let menuToggler = $('.menu-toggle');
+    menuToggler = $('.menu-toggle');
     let myCollapse = $('#navbarMenu');
-    let bsCollapse = new bootstrap.Collapse(myCollapse, {
+    bsCollapse = new bootstrap.Collapse(myCollapse, {
         toggle: false
     })
+
+    multiEvent();
 
     //Navbar
     menuToggler.on('click', function () {
@@ -52,20 +74,14 @@ window.addEventListener('load', function () {
         menuToggler.removeClass('is-active');
         bsCollapse.hide();
     })
-    $('.navbar-nav').find('.nav-link').on('click', function (event) {
-        event.preventDefault();
+    $('.banner .banner-content .banner-btn-wrapper .btn')
+        .add('.navbar-nav .nav-link')
+        .on('click', function (event) {
+            event.preventDefault();
 
-        let href = $(this).attr("href")
-        let blockTop = $(href).offset().top;
-        history.replaceState(undefined, undefined, href)
-
-        if ($(window).width() < 992) {
-            menuToggler.toggleClass('is-active');
-            bsCollapse.hide();
-        }
-        // currentNavHeight();
-        window.scrollTo(0, blockTop - navHeight);
-    })
+            let anchor = $(this).attr("href");
+            scrollTo(anchor, menuToggler, bsCollapse);
+        })
 
     //About me
     if ($(window).width() >= 992) {

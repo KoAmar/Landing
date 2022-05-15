@@ -287,6 +287,10 @@ $slick-arrow-color: black !default;
   line-height: 143%;
   color: $custom-black;
   @include font-size(22px);
+
+  @include media-breakpoint-down(md) {
+    line-height: 120%;
+  }
 }
 
 %sub-block-title {
@@ -303,7 +307,11 @@ $slick-arrow-color: black !default;
   font-weight: normal;
   line-height: 150%;
   color: $custom-black;
-  @include font-size(15px);
+  @include font-size(16px);
+
+  @include media-breakpoint-down(md) {
+    line-height: 120%;
+  }
 }
 
 html,
@@ -372,6 +380,10 @@ li,
   @extend %text-small;
 }
 
+li {
+  margin-bottom: 10px;
+}
+
 @keyframes zoom-in-out {
   30% {
     transform: scale(1.03);
@@ -407,7 +419,7 @@ button {
   background-color: $main-color-4;
   transition: color 0.5s, background-color 0.5s;
 
-  @include font-size(18px);
+  @include font-size(17px);
 
   @include media-breakpoint-down(sm) {
     width: fit-content;
@@ -422,6 +434,13 @@ button {
     border: none;
     box-shadow: none !important;
   }
+}
+
+.inline-social-icon {
+  height: 1em;
+  width: auto;
+  display: inline;
+  padding-left: 1ch;
 }
 
 .btn-close:focus {
@@ -589,6 +608,8 @@ button {
 
     @include media-breakpoint-down(md) {
       align-items: center;
+      padding-left: 30px;
+      padding-right: 30px;
     }
 
     &:after {
@@ -687,6 +708,11 @@ main>*:not(.banner):not(.modal) {
   padding-top: 90px;
   padding-bottom: 90px;
 
+  @media (max-height: 950px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
   @include media-breakpoint-down(md) {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -702,8 +728,10 @@ main>*:not(.banner):not(.modal) {
   margin-bottom: 30px;
 
   @include media-breakpoint-down(md) {
-    padding-top: 5px;
-    padding-bottom: 30px;
+    padding-top: 5px !important;
+    padding-bottom: 30px !important;
+    margin-top: unset;
+    margin-bottom: unset;
   }
 
   @include media-breakpoint-up(md) {
@@ -887,6 +915,7 @@ main>*:not(.banner):not(.modal) {
 
   .title {
     @extend %flex-center;
+    text-align: center;
   }
 
   .testimonials-wrapper.slick-slider {
@@ -917,6 +946,7 @@ main>*:not(.banner):not(.modal) {
 
       .slick-track {
         display: flex;
+        align-items: center;
 
         .slick-slide {
           transform: scale(0.8);
@@ -945,6 +975,7 @@ main>*:not(.banner):not(.modal) {
 
             @include media-breakpoint-down(md) {
               width: calc(100% - 20px);
+              padding: 15px;
             }
 
 
@@ -959,6 +990,10 @@ main>*:not(.banner):not(.modal) {
 
               .quotes {
                 margin-bottom: 30px;
+
+                @include media-breakpoint-down(md) {
+                  margin-bottom: 15px;
+                }
               }
 
               .testimonial-title * {
@@ -1009,22 +1044,23 @@ main>*:not(.banner):not(.modal) {
               .client-bio {
                 @extend %flex-center;
                 flex-direction: column;
+                margin-top: 25px;
 
                 @include media-breakpoint-down(md) {
                   width: 50%;
+                  margin-top: 0;
+                  padding-left: 5px;
                 }
 
                 @include media-breakpoint-down(sm) {
                   width: 70%;
                 }
 
-                h4 {
-                  margin-top: 25px;
-                }
-
                 span.contact {
                   @include font-size(15px);
                   color: $main-color-4;
+                  display: flex;
+                  align-items: center;
                 }
 
                 span.city {
@@ -1063,13 +1099,13 @@ main>*:not(.banner):not(.modal) {
     position: absolute;
     color: red;
     top: unset;
-    bottom: -$buttons-size-desktop - $buttons-padding/2;
+    bottom: -$buttons-size-desktop - calc($buttons-padding/2);
     width: $buttons-size-desktop;
     height: $buttons-size-desktop;
     background-size: contain;
 
     @include media-breakpoint-down(md) {
-      bottom: -$buttons-size-mobile - $buttons-padding/2;
+      bottom: -$buttons-size-mobile - calc($buttons-padding/2);
       width: $buttons-size-mobile;
       height: $buttons-size-mobile;
     }
@@ -1084,6 +1120,10 @@ main>*:not(.banner):not(.modal) {
 
 .payment {
   @extend %flex-center;
+  background-image: url('img/payment-blob-bg.svg');
+  background-repeat: no-repeat;
+  background-position: 52%;
+  background-size: 200% 100%;
 
   .container {
     @extend %flex-center;
@@ -1115,11 +1155,24 @@ main>*:not(.banner):not(.modal) {
       }
 
       h3 {
-        font-weight: 600;
+        // font-weight: 600;
       }
 
       h4 {
+        font-weight: 500;
+      }
+
+      h5 {
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      h6 {
         color: $custom-gray;
+      }
+
+      ul {
+        text-align: left;
       }
 
       &.grey>* {
@@ -1128,12 +1181,12 @@ main>*:not(.banner):not(.modal) {
     }
 
     .image-wrapper {
-      margin-top: 50px;
+      margin-top: 5px;
       margin-bottom: 5px;
 
       img {
         max-width: 100%;
-        width: 200px;
+        width: 220px;
         height: auto;
       }
     }
@@ -1169,11 +1222,162 @@ main>*:not(.banner):not(.modal) {
   }
 }
 
-.contacts {}
+.contacts {
+  @extend %flex-center;
+  flex-direction: column;
+
+  .container {
+    @extend %flex-center;
+    flex-direction: column;
+
+
+    .title-wrapper {
+      @extend %flex-center;
+      flex-direction: column;
+
+      text-align: center;
+
+      h2 {
+        margin-bottom: 5px;
+      }
+    }
+
+    .content-wrapper {
+      position: relative;
+      @extend %flex-center;
+      flex-direction: column;
+      margin-top: 30px;
+      border: 1px solid $main-color-4;
+      border-radius: 5px;
+      padding: 90px 30px;
+      min-width: 70%;
+      z-index: 1;
+
+      * {
+        z-index: 3;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 2;
+        opacity: 0.7;
+      }
+
+      &::before {
+        right: -50px;
+        top: -40px;
+        background-image: url('img/blob-1.svg');
+        background-position: top right;
+      }
+
+      &::after {
+        left: -50px;
+        bottom: -40px;
+        background-image: url('img/blob-2.svg');
+        background-position: bottom left;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        padding: 45px 15px;
+      }
+
+      .button-wrapper {
+        display: table;
+
+        .text-wrapper {
+          display: table-caption;
+          caption-side: top;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+      }
+
+      .contacts-wrapper {
+        margin-top: 60px;
+        @extend %flex-center;
+        flex-direction: column;
+
+        .text-wrapper {
+          @extend %flex-center;
+          text-align: center;
+        }
+
+        .icons-wrapper {
+          margin-top: 15px;
+          display: grid;
+          grid-gap: 25px;
+          grid-template-columns: repeat(3, 1fr);
+          width: fit-content;
+
+          &>* {
+            align-self: center;
+            justify-self: center;
+          }
+
+          // &>*:first-child {
+          //   justify-self: right;
+          // }
+
+          // &>*:last-child {
+          //   justify-self: left;
+          // }
+
+          @include media-breakpoint-down(sm) {
+            margin-top: 25px;
+
+
+            // &>*:nth-child(odd) {
+            //   justify-self: right;
+            // }
+
+            // &>*:nth-child(even) {
+            //   justify-self: left;
+            // }
+
+            // &>*:last-child {
+            //   grid-column: 1/3;
+            //   justify-self: center;
+            // }
+          }
+
+          .image-wrapper {
+            overflow: hidden;
+            border-radius: 10px;
+            width: 45px;
+            height: 45px;
+
+            @include media-breakpoint-down(md) {
+              width: 40px;
+              height: 40px;
+            }
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 footer {
+  margin-top: 30px;
   background: #F9EBC8 url("img/featurettes-bg.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
 }
