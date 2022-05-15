@@ -79,6 +79,7 @@ module.exports = {
         ]
       },
       // { test: /\.(png|svg|jpg|jpeg|gif)$/, type: 'asset/resource' },
+      
       { test: /\.(png|svg|jpg|jpeg|gif)$/, type: 'asset' },
       { test: /\.(woff|woff2|eot|ttf|otf)$/, type: 'asset' },
       // { test: /\.svg$/, use: 'svg-inline-loader' },

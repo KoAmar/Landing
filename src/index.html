@@ -170,9 +170,9 @@
                 <p>
                   «Очень хочу написать отзыв о моем репетиторе/преподавателе и вообще о классном и хорошем человеке
                   –
-                  о Насте. С ней очень комфортно, её не стесняешься, с ней очень удобно, она супер гибкая.
-                </p>
-                <p>
+                  о Насте.
+
+
                   У неё серьезное отношение к своей профессии, к нашим урокам. С Настей все было и есть классно. Она
                   понимает, как строить со мной уроки, чтобы мне было и легко, и интересно. Она очень хорошо
                   чувствует
@@ -189,6 +189,8 @@
               </div>
             </div>
           </div>
+          <button class="prev"></button>
+          <button class="next"></button>
         </div>
         <div class="testimonial-item">
           <div class="row">
@@ -196,7 +198,7 @@
               <img class="quotes" src="img/quotes.svg" alt="Кавычки">
               <div class="testimonial-title">
                 <h3>«Благодаря ей, я стал меньше бояться разговаривать на английском языке и заметил за собой
-                  колоссальный прогресс»</h3>
+                  колоссальный прогресс...»</h3>
               </div>
               <div class="testimonial-text">
                 <p>
@@ -217,6 +219,8 @@
               </div>
             </div>
           </div>
+          <button class="prev"></button>
+          <button class="next"></button>
         </div>
         <div class="testimonial-item">
           <div class="row">
@@ -244,12 +248,35 @@
               </div>
             </div>
           </div>
+          <button class="prev"></button>
+          <button class="next"></button>
         </div>
       </div>
+
     </div>
     <!-- Payment -->
     <div id="payment" class="payment">
-      <div class="container">Оплата</div>
+      <div class="container">
+        <div class="title-wrapper">
+          <h2>Оплата</h2>
+        </div>
+        <div class="content-wrapper">
+          <div class="image-wrapper">
+            <img src="img/payment-icon.svg" alt="Изоброжение оплаты">
+
+          </div>
+          <div class="text-wrapper">
+            <h3>Стоимость занятия 60 минут</h3>
+            <h4>15$/1300₽*</h4>
+          </div>
+          <div class="text-wrapper grey">
+            <p>
+              *Оплата производится сразу за месяц.<br class="d-none d-lg-inline">
+              При отмене занятия за 30 минут до начала урок списывается.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Enrolling -->
     <!-- <div id="enrolling" class="enrolling">Записаться</div> -->
@@ -257,9 +284,17 @@
     <div id="contacts" class="contacts">
       <div class="container">
         Контакты
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scheduleModal">
-          Показать расписание
-        </button>
+        <div class="button-wrapper">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scheduleModal">
+            ПОСМОТРЕТЬ РАСПИСАНИЕ
+          </button>
+          <div class="text-wrapper">
+            <p>
+              Выбери удобное для себя время уже сейчас
+              и сообщи мне о нем при записи.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <!-- Schedule Modal -->

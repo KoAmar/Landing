@@ -99,6 +99,10 @@ window.addEventListener('load', function () {
         slidesToScroll: 1,
         // autoplay: true,
         // autoplaySpeed: 5000,
+        nextArrow: $('.next'),
+        prevArrow: $('.prev')
+        // nextArrow: '<button class="next"></button>',
+        // prevArrow: '<button class="prev"></button>'
     });
     // $('.testimonials .slick-slide .left').each(function () {
     //     // console.log($(this).height());
@@ -114,6 +118,7 @@ window.addEventListener('load', function () {
     // }
     // console.log('+');
 
+    //Payment
 })
 window.addEventListener('resize', function () {
     multiEvent();

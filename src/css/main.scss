@@ -684,8 +684,13 @@ button {
 }
 
 main>*:not(.banner):not(.modal) {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .about-me {
@@ -693,7 +698,6 @@ main>*:not(.banner):not(.modal) {
 
   padding-top: $blob-overflow + 15px !important;
   padding-bottom: $blob-overflow + 20px !important;
-  // min-height: 100vh;
   margin-top: 15px;
   margin-bottom: 30px;
 
@@ -783,9 +787,6 @@ main>*:not(.banner):not(.modal) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  // padding-top: 100px;
-  // padding-bottom: 60px;
-  // min-height: 100vh;
 
   .featurettes-title {
     text-align: center;
@@ -874,14 +875,15 @@ main>*:not(.banner):not(.modal) {
 }
 
 .testimonials {
-  // min-height: 100vh;
-  // @extend %flex-center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: flex-start;
+  justify-content: center;
   position: relative;
 
+  $buttons-size-desktop: 60px;
+  $buttons-size-mobile: 40px;
+  $buttons-padding: 20px;
 
   .title {
     @extend %flex-center;
@@ -902,11 +904,16 @@ main>*:not(.banner):not(.modal) {
 
     margin-left: auto;
     margin-right: auto;
-    position: unset;
+    // position: unset;
     // overflow: visible;
 
     .slick-list {
       overflow: visible;
+      margin-bottom: $buttons-size-desktop + $buttons-padding;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 0;
+      }
 
       .slick-track {
         display: flex;
@@ -919,16 +926,20 @@ main>*:not(.banner):not(.modal) {
           height: inherit;
           padding: 0 5px;
 
-          &>* {
-            height: 100%;
+          @include media-breakpoint-up(md) {
+            &>* {
+              height: 100%;
+            }
           }
 
           .testimonial-item {
             display: flex !important;
             align-items: center;
+            position: relative;
+            margin-bottom: 50px;
 
             height: 100%;
-            border: 1px solid $main-color-3;
+            border: 1px solid $main-color-4;
             border-radius: 5px;
             padding: 30px;
 
@@ -1033,14 +1044,35 @@ main>*:not(.banner):not(.modal) {
     }
   }
 
-  .slick-prev,
-  .slick-next {
+  .prev {
+    left: calc(50% - 100px);
+    transform: translate(-50%);
+    background: transparent;
+    background-image: url('img/button-prev.svg');
+  }
+
+  .next {
+    right: calc(50% - 100px);
+    transform: translate(50%);
+    background: transparent;
+    background-image: url('img/button-next.svg');
+  }
+
+  .prev,
+  .next {
     position: absolute;
     color: red;
     top: unset;
-    bottom: 30px;
-    width: fit-content;
-    height: fit-content;
+    bottom: -$buttons-size-desktop - $buttons-padding/2;
+    width: $buttons-size-desktop;
+    height: $buttons-size-desktop;
+    background-size: contain;
+
+    @include media-breakpoint-down(md) {
+      bottom: -$buttons-size-mobile - $buttons-padding/2;
+      width: $buttons-size-mobile;
+      height: $buttons-size-mobile;
+    }
 
     &:hover,
     &:active,
@@ -1048,26 +1080,100 @@ main>*:not(.banner):not(.modal) {
       animation: none;
     }
   }
-
-  .slick-prev {
-    left: calc(50% - 100px);
-    transform: translate(-50%);
-  }
-
-  .slick-next {
-    right: calc(50% - 100px);
-    transform: translate(50%);
-  }
 }
 
 .payment {
-  // min-height: 100vh;
+  @extend %flex-center;
+
+  .container {
+    @extend %flex-center;
+    flex-direction: column;
+  }
+
+  .title-wrapper {
+    @extend %flex-center;
+    flex-direction: column;
+    width: fit-content;
+  }
+
+  .content-wrapper {
+    @extend %flex-center;
+    flex-direction: column;
+
+    .text-wrapper {
+      text-align: center;
+
+      @include media-breakpoint-up(md) {
+        max-width: 45vw;
+        margin-bottom: 15px;
+      }
+
+      margin-bottom: 10px;
+
+      p {
+        font-size: 1.3em;
+      }
+
+      h3 {
+        font-weight: 600;
+      }
+
+      h4 {
+        color: $custom-gray;
+      }
+
+      &.grey>* {
+        color: $custom-gray;
+      }
+    }
+
+    .image-wrapper {
+      margin-top: 50px;
+      margin-bottom: 5px;
+
+      img {
+        max-width: 100%;
+        width: 200px;
+        height: auto;
+      }
+    }
+
+    .image-wrapper+.text-wrapper {
+      margin-top: 5px;
+      margin-bottom: 50px;
+    }
+
+    // .button-wrapper {
+    //   margin-top: 10px;
+    //   margin-bottom: 10px;
+    //   display: grid;
+    //   grid-template-columns: repeat(2, 1fr);
+    //   width: fit-content;
+    //   grid-gap: 15px;
+
+    //   button{
+    //     justify-self: right;
+    //   }
+    //   .text-wrapper {
+    //     max-width: 350px;
+    //     width: fit-content;
+    //     text-align: left;
+    //     align-self: center;
+    //     margin: 0;
+
+    //     // margin-top: 5px;
+    //     // display: table-caption;
+    //     // caption-side: right;
+    //   }
+    // }
+  }
+}
+
+.contacts {}
+
+footer {
   background: #F9EBC8 url("img/featurettes-bg.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.contacts {
-  // min-height: 100vh;
 }
