@@ -381,7 +381,7 @@ li,
 }
 
 li {
-  margin-bottom: 10px;
+  margin-bottom: 7.5px;
 }
 
 @keyframes zoom-in-out {
@@ -946,7 +946,10 @@ main>*:not(.banner):not(.modal) {
 
       .slick-track {
         display: flex;
-        align-items: center;
+
+        @include media-breakpoint-down(md) {
+          align-items: center;
+        }
 
         .slick-slide {
           transform: scale(0.8);
