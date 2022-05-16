@@ -486,8 +486,21 @@ button {
   width: 100vw;
   max-width: 100%;
   z-index: 1000;
-  background-color: rgba($custom-white, $alpha: .8);
+  // background-color: rgba($custom-white, $alpha: .8);
+  background-color: $custom-white;
   color: $custom-black;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow: 0px 0px 27px -17px rgba(34, 60, 80, 0.29);
+
+  @include media-breakpoint-up(lg){
+    .container{
+      justify-content: space-around;
+    }
+    .collapse{
+      flex-grow: unset;
+    }
+  }
 
   @include media-breakpoint-down(lg) {
     padding-left: 5px;
