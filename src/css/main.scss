@@ -258,6 +258,7 @@ $slick-loader-path: "modules/slick-carousel/slick/" !default;
 $slick-arrow-color: black !default;
 
 @import "modules/slick-carousel/slick/slick.scss";
+@import "modules/aos/src/sass/aos.scss";
 // @import "modules/slick-carousel/slick/slick-theme.scss";
 
 
@@ -455,6 +456,7 @@ button {
 
 #scheduleModal {
   overflow: hidden;
+  padding-right: 0 !important;
 
   .modal-dialog {
     max-width: 100%;
@@ -486,8 +488,8 @@ button {
   width: 100vw;
   max-width: 100%;
   z-index: 1000;
-  // background-color: rgba($custom-white, $alpha: .8);
-  background-color: $custom-white;
+  background-color: rgba($custom-white, $alpha: .8);
+  // background-color: $custom-white;
   color: $custom-black;
   padding-top: 0;
   padding-bottom: 0;
@@ -769,22 +771,22 @@ main>*:not(.banner):not(.modal) {
       }
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 130%;
-      height: 130%;
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   width: 130%;
+    //   height: 130%;
 
-      @include media-breakpoint-down(md) {
-        top: 0;
-      }
+    //   @include media-breakpoint-down(md) {
+    //     top: 0;
+    //   }
 
-      background-image: url("img/about-me-photo-bg.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      z-index: -1;
-    }
+    //   background-image: url("img/about-me-photo-bg.svg");
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   background-size: 100% 100%;
+    //   z-index: -1;
+    // }
   }
 
   .about-me-text-wrapper {
@@ -1387,11 +1389,13 @@ main>*:not(.banner):not(.modal) {
 
 footer {
   margin-top: 30px;
-  background: #F9EBC8 url("img/featurettes-bg.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  // background: #F9EBC8 url("img/featurettes-bg.svg");
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  background-color: $main-color-2;
   text-align: center;
+  
 
   a {
     text-decoration: none;

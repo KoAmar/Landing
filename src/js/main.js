@@ -4,6 +4,7 @@ import $ from 'jquery';
 import 'slick-carousel';
 // import jquery from 'jquery';
 import 'css/main.scss';
+import AOS from 'aos';
 window.bootstrap = bootstrap;
 
 var target = window.location.hash;
@@ -74,6 +75,8 @@ window.addEventListener('load', function () {
         menuToggler.removeClass('is-active');
         bsCollapse.hide();
     })
+    
+    //Banner
     $('.banner .banner-content .banner-btn-wrapper .btn')
         .add('.navbar-nav .nav-link')
         .on('click', function (event) {
@@ -82,6 +85,15 @@ window.addEventListener('load', function () {
             let anchor = $(this).attr("href");
             scrollTo(anchor, menuToggler, bsCollapse);
         })
+    
+    AOS.init({
+        // debounceDelay: 50, 
+        // offset: 200,
+        // delay: 5,
+        duration: 400,
+        // once: false, 
+        // mirror: true, 
+    });
 
     //About me
     if ($(window).width() >= 992) {
@@ -114,7 +126,7 @@ window.addEventListener('load', function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3500,
+        autoplaySpeed: 2500,
         nextArrow: $('.next'),
         prevArrow: $('.prev')
         // nextArrow: '<button class="next"></button>',
