@@ -1,7 +1,7 @@
 module.exports = {
     plugins: [
       require('autoprefixer'),
-      require('cssnano'),
+      // require('cssnano'),
       // require('stylelint'),
       // require('stylefmt'),
       // require('doiuse'),
