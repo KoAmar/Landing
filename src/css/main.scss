@@ -321,6 +321,9 @@ body {
   @extend %text-small;
   overflow-x: hidden;
 }
+body{
+  overflow-y: hidden;
+}
 
 h6,
 .h6,
@@ -857,7 +860,7 @@ main>*:not(.banner):not(.modal) {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: start;
+      justify-content: flex-start;
       text-align: center;
       cursor: pointer;
       height: fit-content;
