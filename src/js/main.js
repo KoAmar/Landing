@@ -88,7 +88,7 @@ window.addEventListener('load', function () {
     
     AOS.init({
         // debounceDelay: 50, 
-        // offset: 200,
+        offset: 400,
         // delay: 5,
         duration: 400,
         // once: false, 
