@@ -31,7 +31,7 @@ function multiEvent() {
         "padding-top": navHeight + 100,
     });
 
-    $('#scheduleModal .modal-content').height(window.innerHeight);
+    $('#scheduleModal .modal-content, #testimonialModal .modal-content').height(window.innerHeight);
 
     $('main > *:not(.banner)').each(function () {
         $(this).css('min-height', window.innerHeight - navHeight);
@@ -42,6 +42,19 @@ function multiEvent() {
             target = undefined;
         }, 1);
     }
+}
+
+function hideScrollModal(modal) {
+    modal.addEventListener('shown.bs.modal', function () {
+        $(':root').css({
+            overflowY: 'hidden'
+        })
+    })
+    modal.addEventListener('hidden.bs.modal', function () {
+        $(':root').css({
+            overflowY: 'visible'
+        })
+    })
 }
 
 function scrollTo(anchor, menuToggler, bsCollapse) {
@@ -75,7 +88,7 @@ window.addEventListener('load', function () {
         menuToggler.removeClass('is-active');
         bsCollapse.hide();
     })
-    
+
     //Banner
     $('.banner .banner-content .banner-btn-wrapper .btn')
         .add('.navbar-nav .nav-link')
@@ -85,7 +98,7 @@ window.addEventListener('load', function () {
             let anchor = $(this).attr("href");
             scrollTo(anchor, menuToggler, bsCollapse);
         })
-    
+
     AOS.init({
         // debounceDelay: 50, 
         offset: 400,
@@ -107,26 +120,17 @@ window.addEventListener('load', function () {
         })
     }
 
-    //Schedule
-    var scheduleModal = document.getElementById('scheduleModal')//$('#scheduleModal');
-    scheduleModal.addEventListener('shown.bs.modal', function () {
-        $(':root').css({
-            overflowY: 'hidden'
-        })
-    })
-    scheduleModal.addEventListener('hidden.bs.modal', function () {
-        $(':root').css({
-            overflowY: 'visible'
-        })
-    })
+    //Modal
+    hideScrollModal(document.getElementById('scheduleModal'));
+    hideScrollModal(document.getElementById('testimonialModal'));
 
     //Testimonials
     $('.testimonials-wrapper').slick({
         // infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2500,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
         nextArrow: $('.next'),
         prevArrow: $('.prev')
         // nextArrow: '<button class="next"></button>',
