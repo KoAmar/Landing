@@ -209,6 +209,10 @@
                   понимает, как строить со мной уроки, чтобы мне было и легко, и интересно. Она очень хорошо
                   чувствует
                   меня и находит подход.»
+
+                  <a type="button" class="" data-bs-toggle="modal" data-bs-target="#testimonialModal">
+                    Читать отзыв полностью
+                  </a>
                 </p>
               </div>
             </div>
@@ -309,19 +313,19 @@
               <p>Свяжись со мной там, <br class="d-inline d-md-none">где тебе удобнее</p>
             </div>
             <div class="icons-wrapper">
-              <!-- <a href="" class="order-sm-1">
+              <a href="https://wa.me/375447235143" class="order-sm-1">
                 <div class="image-wrapper"><img src="img/whatsapp-icon.svg" alt="Ватсапп" target="_blank"></div>
-              </a> -->
-              <a href="https://www.instagram.com/soyssause/" class="order-1">
+              </a>
+              <a href="https://www.instagram.com/soyssause/" class="order-sm-1">
                 <div class="image-wrapper"><img src="img/instagram-icon.svg" alt="Инстаграмм" target="_blank"></div>
               </a>
-              <a href="https://vk.com/thisisnotfunnyanymore" class="order-3">
+              <a href="https://vk.com/thisisnotfunnyanymore" class="order-sm-3">
                 <div class="image-wrapper"><img src="img/vk-icon.svg" alt="ВКонтакте" target="_blank"></div>
               </a>
-              <!-- <a href="" class="order-sm-3">
+              <a href="viber://chat?number=%2B375447235143" class="order-sm-3">
                 <div class="image-wrapper"><img src="img/viber-icon.svg" alt="Вайбер" target="_blank"></div>
-              </a> -->
-              <a href="https://t.me/soyssause" class="order-2">
+              </a>
+              <a href="https://t.me/soyssause" class="order-sm-2">
                 <div class="image-wrapper"><img src="img/telegram-icon.svg" alt="Телеграмм" target="_blank"></div>
               </a>
             </div>
@@ -334,14 +338,71 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="scheduleModalLabel">Расписание на неделю</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title" id="scheduleModalLabel">Актуальное расписание</h3>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
+            <div class="schedule-annotations">
+              <div class="annotation">
+                <div class="annotation-color"></div>
+                -
+                <div class="annotation-title">Регулярно свободно</div>
+              </div>
+              <div class="annotation">
+                <div class="annotation-color"></div>
+                -
+                <div class="annotation-title">Регулярно занято</div>
+              </div>
+              <div class="annotation">
+                <div class="annotation-color"></div>
+                -
+                <div class="annotation-title">Разово занято</div>
+              </div>
+            </div>
+            <!-- <div class="timezone-wrapper">
+              <div class="timezone">Часовой пояс по москве</div>
+            </div> -->
             <iframe
               src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FMinsk&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=WEEK&src=bG5mbGtza2RxZmlxa29oNjEzNm1sZzI0aGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZzdhZXVqZGt0anVyZnFpMjRtbDF1ZHBwdm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=MWV0M2h0cGtkM3FiMnVqMXM1aTc4NGxscGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D50000&color=%23B39DDB&color=%23039BE5"
               frameborder="0" scrolling="yes">
             </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial Modal -->
+    <div class="modal fade" id="testimonialModal" tabindex="-1" aria-labelledby="testimonialModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title" id="scheduleModalLabel">Полный отзыв</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-wrapper">
+              "Очень хочу написать отзыв о моем репетиторе/преподавателе и вообще о классном и хорошем человеке – о
+              Насте. Познакомились мы с ней 5 месяцев назад! Самой не вериться, что я решилась на это и заставила себя,
+              в буквальном смысле, пойти на английский. Во-первых, мне по работе дали год, чтобы я выучила английский.
+              Они не сказали, что выкинут меня)) Но намекнули, что в моей профессии очень нужен английский) А во-вторых,
+              о Насте очень хорошо отзывалась моя подруга. Ну прям ооооочень хорошо, что я ей поверила. Хочу сказать,
+              что я очень требовательна к людям, я отдаюсь на 100 процентов и хочу такой же отдачи от окружающих, и
+              подобрать себе преподавателя, которого я не брошу на 15ой минуте и не выйду из созвона очень тяжело (это
+              относится к любой профессии, к кому я обращаюсь)) Так вот, Настя такая же! У неё такое же серьезное
+              отношение к своей профессии, к нашим урокам. С Настей все было и есть классно. Она понимает, как строить
+              со мной уроки, чтобы мне было и легко, и интересно. Она очень хорошо чувствует меня и находит подход. Еще
+              хочу сказать, что с Настей прям хочется учиться, к сожалению из за огромного загруза на работе, мне
+              получается заниматься английским всего два дня в неделю. Но, если я была бы свободной я занималась бы
+              английским с Настей каждый день! С ней очень комфортно, её не стесняешься, с ней очень удобно, она супер
+              гибкая. И самое главное, что я хотела написать, в школе у меня был английский и я его не понимала, мама
+              брала репетиторов - но они тоже не могли мне в голову вложить информацию, потом в колледже был английский,
+              там тоже не получилось понять, и еще в академии был английский и там всё мимо. А с Настей мне гораздо
+              легче понимать, она очень грамотно раскладывает всё по полкам, а если я что то не пойму мы это не бросаем
+              и не переходим к следующей теме, а учим супер разными методами, пока я не пойму, и переодически
+              возвращаемся к прошедшим темам, чтобы я не забывала. Мне очень повезло, что я встретила Настю, готова
+              вернуться через пол года и дополнить отзыв, чтобы поделиться с моим прогрессом.))"
+            </div>
           </div>
         </div>
       </div>
