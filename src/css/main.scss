@@ -534,7 +534,7 @@ button {
               @include font-size(14px);
 
               @include media-breakpoint-down(sm) {
-                max-width: min-content;
+                // max-width: min-content;
                 @include font-size(12px);
               }
 
