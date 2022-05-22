@@ -129,8 +129,8 @@ window.addEventListener('load', function () {
         // infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
+        autoplay: true,
+        autoplaySpeed: 3000,
         nextArrow: $('.next'),
         prevArrow: $('.prev')
         // nextArrow: '<button class="next"></button>',
