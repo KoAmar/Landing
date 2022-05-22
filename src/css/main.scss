@@ -470,7 +470,7 @@ button {
     .modal-content {
       transition: height 0.5s;
       border-radius: 0;
-      overflow-y: scroll;
+      overflow-y: auto;
 
       .modal-header {
         padding: 0.3rem 1rem 0.3rem 1rem;
