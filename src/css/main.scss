@@ -877,6 +877,9 @@ main>*:not(.banner):not(.modal) {
     .text-wrapper {
       text-align: center;
       margin-top: 15px;
+      background-color: rgba($custom-white, 0.6);
+      border-radius: 15px;
+      padding: 5px;
 
       &>* {
         color: $custom-black;
