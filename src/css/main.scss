@@ -831,10 +831,10 @@ main>*:not(.banner):not(.modal) {
 }
 
 .about-me {
-  $blob-overflow: 155px;
+  $blob-overflow: 70px;
 
-  padding-top: $blob-overflow + 15px !important;
-  padding-bottom: $blob-overflow + 20px !important;
+  padding-top: $blob-overflow + 5px !important;
+  padding-bottom: $blob-overflow + 5px !important;
   margin-top: 15px;
   margin-bottom: 30px;
 
@@ -857,8 +857,12 @@ main>*:not(.banner):not(.modal) {
     align-items: center;
     justify-content: center;
 
+    @include media-breakpoint-down(md) {
+      margin-bottom: 30px;
+    }
+
     img {
-      height: 70%;
+      // height: 70%;
       width: auto;
       max-width: 100%;
 
