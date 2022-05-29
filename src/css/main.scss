@@ -870,7 +870,7 @@ main>*:not(.banner):not(.modal) {
       }
 
       @include media-breakpoint-down(md) {
-        height: 85%;
+        height: 50%;
       }
     }
 
