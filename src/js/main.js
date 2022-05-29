@@ -42,6 +42,22 @@ function multiEvent() {
             target = undefined;
         }, 1);
     }
+    
+    //About me
+    if ($(window).width() >= 992) {
+        $('.featurettes-item').on('mouseenter', function () {
+            $(this).addClass('is-active');
+            $(this).find('.featurette-text').slideDown(250)
+        })
+        $('.featurettes-item').on('mouseleave', function () {
+            $(this).removeClass('is-active');
+            $(this).find('.featurette-text').slideUp(250)
+        })
+    }
+    else{
+        $(this).addClass('is-active');
+        $('.featurettes-item .featurette-text').show();
+    }
 }
 
 function hideScrollModal(modal) {
@@ -108,17 +124,7 @@ window.addEventListener('load', function () {
         // mirror: true, 
     });
 
-    //About me
-    if ($(window).width() >= 992) {
-        $('.featurettes-item').on('mouseenter', function () {
-            $(this).addClass('is-active');
-            $(this).find('.featurette-text').slideDown(250)
-        })
-        $('.featurettes-item').on('mouseleave', function () {
-            $(this).removeClass('is-active');
-            $(this).find('.featurette-text').slideUp(250)
-        })
-    }
+
 
     //Modal
     hideScrollModal(document.getElementById('scheduleModal'));
