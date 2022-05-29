@@ -869,6 +869,10 @@ main>*:not(.banner):not(.modal) {
       @include media-breakpoint-up(md) {
         min-height: 340px;
       }
+
+      @include media-breakpoint-down(md) {
+        height: 85%;
+      }
     }
 
     // &::after {
