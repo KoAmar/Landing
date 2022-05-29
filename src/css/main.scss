@@ -853,9 +853,8 @@ main>*:not(.banner):not(.modal) {
 
   .about-me-image-wrapper {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex-center;
+    flex-direction: column;
 
     @include media-breakpoint-down(md) {
       margin-bottom: 30px;
@@ -872,6 +871,19 @@ main>*:not(.banner):not(.modal) {
 
       @include media-breakpoint-down(md) {
         height: 85%;
+      }
+    }
+
+    .text-wrapper {
+      text-align: center;
+      margin-top: 15px;
+
+      &>* {
+        color: $custom-black;
+      }
+
+      span {
+        color: $custom-gray;
       }
     }
 
