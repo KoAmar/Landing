@@ -14,7 +14,8 @@ module.exports = {
   entry: './src/js/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: 'assets/[name][ext][query]',
+    // assetModuleFilename: 'assets/[name][ext][query]',
+    assetModuleFilename: 'assets/[name]-[hash][ext][query]',
     filename: 'index-[contenthash].js',
     clean: true
   },
