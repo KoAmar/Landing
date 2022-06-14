@@ -1462,11 +1462,22 @@ main>*:not(.banner):not(.modal) {
         }
 
         .icons-wrapper {
-          margin-top: 15px;
-          display: grid;
-          grid-gap: 25px;
-          grid-template-columns: repeat(5, 1fr);
-          width: fit-content;
+          margin-bottom: 15px;
+          @extend %flex-center;
+          // display: grid;
+          // grid-gap: 25px;
+          // grid-template-columns: repeat(5, 1fr);
+          // width: fit-content;
+
+          a {
+            @extend %flex-center;
+            text-decoration: none;
+            color: $custom-gray;
+
+            span {
+              margin-right: 10px;
+            }
+          }
 
           &>* {
             align-self: center;
@@ -1481,39 +1492,40 @@ main>*:not(.banner):not(.modal) {
             justify-self: left;
           }
 
-          @include media-breakpoint-down(sm) {
-            margin-top: 25px;
-            grid-template-columns: repeat(2, 1fr);
+          // @include media-breakpoint-down(sm) {
+          //   margin-top: 25px;
+          //   grid-template-columns: repeat(2, 1fr);
 
 
-            &>*:nth-child(odd) {
-              justify-self: right;
-            }
+          //   &>*:nth-child(odd) {
+          //     justify-self: right;
+          //   }
 
-            &>*:nth-child(even) {
-              justify-self: left;
-            }
+          //   &>*:nth-child(even) {
+          //     justify-self: left;
+          //   }
 
-            &>*:last-child {
-              grid-column: 1/3;
-              justify-self: center;
-            }
-          }
+          //   &>*:last-child {
+          //     grid-column: 1/3;
+          //     justify-self: center;
+          //   }
+          // }
 
           .image-wrapper {
             overflow: hidden;
             border-radius: 10px;
-            width: 45px;
-            height: 45px;
+            // width: 45px;
+            // height: 45px;
+
 
             @include media-breakpoint-down(md) {
-              width: 40px;
-              height: 40px;
+              // width: 40px;
+              // height: 40px;
             }
 
             img {
-              width: 100%;
-              height: auto;
+              width: auto;
+              height: 2em;
             }
           }
         }
