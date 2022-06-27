@@ -2,6 +2,7 @@ const path = require('path')
 const glob = require('glob')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const fullUrl = "https://evenkoenglish.com/"
 // const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 // const PurgecssPlugin = require('purgecss-webpack-plugin')
 // const PATHS = {
@@ -14,8 +15,8 @@ module.exports = {
   entry: './src/js/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    // assetModuleFilename: 'assets/[name][ext][query]',
-    assetModuleFilename: 'assets/[name]-[hash][ext][query]',
+    assetModuleFilename: 'assets/[name][ext][query]',
+    // assetModuleFilename: 'assets/[name]-[hash][ext][query]',
     filename: 'index-[contenthash].js',
     clean: true
   },
@@ -54,7 +55,7 @@ module.exports = {
         ]
       },
       // { test: /\.(png|svg|jpg|jpeg|gif)$/, type: 'asset/resource' },
-      
+
       { test: /\.(png|svg|jpg|jpeg|gif)$/, type: 'asset' },
       { test: /\.(woff|woff2|eot|ttf|otf)$/, type: 'asset' },
       // { test: /\.svg$/, use: 'svg-inline-loader' },
