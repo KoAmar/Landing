@@ -6,7 +6,8 @@ import 'slick-carousel';
 import 'css/main.scss';
 import AOS from 'aos';
 window.bootstrap = bootstrap;
-require('img/page-preview.png');
+require('img/page-preview-og-1.png');
+require('img/page-preview-tw-1.png');
 
 var target = window.location.hash;
 let navHeight;
